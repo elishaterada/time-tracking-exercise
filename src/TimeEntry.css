@@ -1,0 +1,101 @@
+.TimeEntry-wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 2em;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+  padding: 1em 2em;
+  background: #FFFFFF;
+}
+
+.TimeEntry-remove-button {
+  cursor: pointer;
+  width: 3.25em;
+  height: 3.25em;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  border-radius: 50%;
+  font-size: 0.75em;
+}
+
+.TimeEntry-project-name {
+  margin: 0;
+  font-size: 1.25em;
+  font-weight: 500;
+}
+
+.TimeEntry-note {
+  margin: 0;
+  font-size: 0.825em;
+  font-weight: 400;
+}
+
+.TimeEntry-time {
+  font-size: 1.25em;
+  font-weight: 700;
+}
+
+.TimeEntry-primary-detail {
+  display: grid;
+  grid-gap: 0.5em;
+  justify-content: start;
+  justify-items: start;
+  align-content: start;
+  align-items: start;
+}
+
+.TimeEntry-secondary-detail {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 1em;
+  justify-content: start;
+  justify-items: start;
+  align-content: center;
+  align-items: center;
+}
+
+.TimeEntry-start-button {
+  cursor: pointer;
+  width: 6em;
+  height: 3.25em;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #CCCCCC;
+  background: transparent;
+  border-radius: 6px;
+  font-size: 1em;
+}
+
+.TimeEntry-stop-button {
+  cursor: pointer;
+  width: 6em;
+  height: 3.25em;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #CCCCCC;
+  background: #51af45;
+  border-radius: 6px;
+  font-size: 1em;
+  color: #FFFFFF;
+}
+
+.TimeEntry-button-layout {
+  display: grid;
+  grid-gap: 0.5em;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
