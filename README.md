@@ -4,7 +4,12 @@ The goal of this repository is to demonstrate your JavaScript / React capability
 
 The feature is only half complete for you to fill in the blank by understanding the existing architecture and bring your own solution on top of it.
 
-The app is built on the latest Create-React-App at the time of creation with TypeScript. Please read [CRA_README.md](./CRA_README.md) for getting started.
+The app is built on the latest Create-React-App with TypeScript.
+
+## Setup
+
+1. ```npm install```
+2. ```npm start```
 
 ## Goals
 
