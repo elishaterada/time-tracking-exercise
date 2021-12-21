@@ -99,3 +99,12 @@
   justify-items: center;
   justify-content: center;
 }
+
+.TimeEntry-edit-button {
+  cursor: pointer;
+  padding: 0.75em 2em;
+  background: transparent;
+  border: none;
+  font-size: 0.825em;
+  color: #395df3;
+}

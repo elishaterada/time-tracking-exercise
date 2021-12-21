@@ -1,0 +1,9 @@
+.Entry-form {
+  display: grid;
+  grid-gap: 1em;
+}
+.Entry-actions {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 2em;
+}

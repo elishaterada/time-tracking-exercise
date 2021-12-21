@@ -1,32 +1,34 @@
 import React from "react";
+import { Clock, XCircle } from "react-bootstrap-icons";
 import "./TimeEntry.css";
 import { TimeEntryModel } from "../Types";
-import { Clock, XCircle } from "react-bootstrap-icons";
 
 function TimeEntry({
   timeEntry,
   onRemove,
   onStart,
   onStop,
+  onEdit,
 }: {
-  timeEntry: TimeEntryModel;
-  onRemove: (entry: TimeEntryModel) => void;
-  onStart: (entry: TimeEntryModel) => void;
-  onStop: (entry: TimeEntryModel) => void;
+  timeEntry?: TimeEntryModel;
+  onRemove: () => void;
+  onStart: () => void;
+  onStop: () => void;
+  onEdit: () => void;
 }) {
   return (
     <div className="TimeEntry-wrapper">
       <div className="TimeEntry-primary-detail">
-        <p className="TimeEntry-project-name">{timeEntry.project.name}</p>
-        {timeEntry.note && <p className="TimeEntry-note">{timeEntry.note}</p>}
+        <p className="TimeEntry-project-name">{timeEntry?.project.name}</p>
+        {timeEntry?.note && <p className="TimeEntry-note">{timeEntry?.note}</p>}
       </div>
       <div className="TimeEntry-secondary-detail">
         <span className="TimeEntry-time">0.00</span>
-        {!timeEntry.isRunning && (
+        {!timeEntry?.isRunning && (
           <button
             className="TimeEntry-start-button"
             type="button"
-            onClick={() => onStart(timeEntry)}
+            onClick={onStart}
           >
             <div className="TimeEntry-button-layout">
               <Clock size="1.25em" />
@@ -34,11 +36,11 @@ function TimeEntry({
             </div>
           </button>
         )}
-        {timeEntry.isRunning && (
+        {timeEntry?.isRunning && (
           <button
             className="TimeEntry-stop-button"
             type="button"
-            onClick={() => onStop(timeEntry)}
+            onClick={onStop}
           >
             <div className="TimeEntry-button-layout">
               <Clock color="white" size="1.25em" /> Stop
@@ -46,9 +48,16 @@ function TimeEntry({
           </button>
         )}
         <button
+          className="TimeEntry-edit-button"
+          type="button"
+          onClick={onEdit}
+        >
+          Edit
+        </button>
+        <button
           className="TimeEntry-remove-button"
           type="button"
-          onClick={() => onRemove(timeEntry)}
+          onClick={onRemove}
         >
           <XCircle size="2em" />
         </button>
